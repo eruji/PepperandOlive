@@ -10,6 +10,34 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Raleway:ital,wght@1,600&display=swap');
 
+        .navbar {
+            overflow: hidden;
+            background-color: white;
+            position: fixed;
+            top: 0;
+            /* padding-bottom: 100px; */
+            width: 100%;
+            height: 100px;
+            z-index: 9999;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .main {
+            padding: 16px;
+            margin-top: 50px;
+            height: 1500px;
+            /* z-index: -1; */
+            /* Used in this example to enable scrolling */
+        }
 
         .fade {
             opacity: 1;
@@ -31,8 +59,7 @@
 
         }
 
-        .container4
-         {
+        .container3 {
             position: relative;
             text-align: center;
             color: white;
@@ -59,8 +86,8 @@
 
         hr {
             /*            width: 75%;*/
-            width: 1100px;
             border: 1px solid #cec8c8;
+            max-width: 1100px;
         }
 
         .logotext {
@@ -69,14 +96,6 @@
             /* font-weight:bold */
             /* background-color: tomato; */
             letter-spacing: 2px;
-        }
-
-        .logotext2 {
-            font-size: 18px;
-            font-family: 'Libre Baskerville', serif;
-            /* font-weight:bold */
-            /* background-color: tomato; */
-            letter-spacing: 5px;
         }
 
         .logoimage {
@@ -102,16 +121,20 @@
         .centered {
             text-align: center;
             position: relative;
+            
         }
 
         #slideshow {
             margin: 20px auto;
             position: relative;
             /* background-color: tomato; */
-            width: 1200px;
+            max-width: 1200px;
             height: 600px;
             padding: 10px;
-            margin-top: 100px;
+
+            /* max-width: 1200px; */
+            /* margin: 0 auto; */
+            overflow: hidden;
             /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); */
         }
 
@@ -121,6 +144,11 @@
             left: 10px;
             right: 10px;
             bottom: 10px;
+
+            width: 1200px;
+            /* position: relative; */
+            left: 50%;
+            margin-left: -600px;
         }
 
         .centered2 {
@@ -129,7 +157,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 15px 20px;
-            outline: 6px solid white;
+            outline: 6px solid #e2dede;
             background-color: white;
             color: #5a5656;
             border: 1px solid black;
@@ -155,114 +183,101 @@
             font-size: 10px;
             letter-spacing: 2px;
         }
-
-        .fixed-nav-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-            width: 100%;
-            height: 100px;
-            background-color: white;
-        }
     </style>
 </head>
 
 <body>
-    <div class="fixed-nav-bar">
+    <div class="navbar">
         <div class="centered">
             <div class="logotext">
                 PEPPER&OLIVE
             </div>
-
-            <!-- <div class="logotext2">
-            INTERIOR DESIGN
-        </div> -->
             <div class="logoimage centered">
                 <img src="images/logos/leaves.jpg" height="25px">
             </div>
-        </div>
-        <hr>
-
-        <div class="centered">
-
+            <div>
+                <hr>
+            </div>
             <div class="logosubtext">
                 Modern - Organic - Collected
             </div>
         </div>
     </div>
-    
-    <div class="centered">
-        <div id="slideshow">
-            <div>
-                <img src="images/projects/coulter_pine/wide/coulter_pine-006.jpg">
+
+
+    <!-- <hr> -->
+    <div class="main">
+        <div class="centered">
+            <div id="slideshow">
+                <div>
+                    <img src="images/projects/coulter_pine/wide/coulter_pine-006.jpg">
+                </div>
+                <div>
+                    <img src="images/projects/coulter_pine/wide/coulter_pine-012.jpg">
+                </div>
+                <div>
+                    <img src="images/projects/coulter_pine/wide/coulter_pine-014.jpg">
+                </div>
             </div>
-            <div>
-                <img src="images/projects/coulter_pine/wide/coulter_pine-012.jpg">
+        </div>
+
+        <div class="centered">
+            <div class="logoimage centered">
+                <img src="images/logos/leaves.jpg" height="25px">
             </div>
-            <div>
-                <img src="images/projects/coulter_pine/wide/coulter_pine-014.jpg">
+            <div class="logosubtext">
+                Latest Projects
             </div>
         </div>
-    </div>
 
-    <div class="centered">
-        <div class="logoimage centered">
-            <img src="images/logos/leaves.jpg" height="25px">
-        </div>
-        <div class="logosubtext">
-            Latest Projects
-        </div>
-    </div>
+        <hr>
 
-    <hr>
-
-    <div class="container">
-        <div class="container3 item">
-            <a href="dale_project.html">
-                <img class="fade" src="Images/projects/coulter_pine/tall/coulter_pine-007.jpg">
-                <div class="centered2 test">COULTER PINE</div>
-            </a>
-        </div>
-        <div class="container3 item">
-            <a href="dale_project.html">
-                <img class="fade" src="Images/projects/coulter_pine/tall/coulter_pine-014.jpg">
-                <div class="centered2 test">DALE</div>
-            </a>
-        </div>
-        <div class="container3 item">
-            <a href="dale_project.html">
-                <img class="fade" src="Images/projects/coulter_pine/tall/coulter_pine-018.jpg">
-                <div class="centered2 test">JUNIPER</div>
-            </a>
-        </div>
-    </div>
-
-
-    <div class="centered">
-        <div class="logoimage centered">
-            <img src="images/logos/leaves.jpg" height="25px">
-        </div>
-        <div class="logosubtext">
-            Let's Connect
-        </div>
-    </div>
-
-    <hr>
-    <footer>
-        <div class="social">
-            <p>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/pepperandolivehome/">
-                    @PEPPERANDOLIVEHOME
+        <div class="container">
+            <div class="container3 item">
+                <a href="dale_project.html">
+                    <img class="fade" src="Images/projects/coulter_pine/tall/coulter_pine-007.jpg">
+                    <div class="centered2 test">COULTER PINE</div>
                 </a>
-            </p>
-            <p>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/pepperandolivehome/">
-                    <img src="Images/social/insta.png" height="25px">
+            </div>
+            <div class="container3 item">
+                <a href="dale_project.html">
+                    <img class="fade" src="Images/projects/coulter_pine/tall/coulter_pine-014.jpg">
+                    <div class="centered2 test">DALE</div>
                 </a>
-            </p>
+            </div>
+            <div class="container3 item">
+                <a href="dale_project.html">
+                    <img class="fade" src="Images/projects/coulter_pine/tall/coulter_pine-018.jpg">
+                    <div class="centered2 test">JUNIPER</div>
+                </a>
+            </div>
         </div>
 
+
+        <div class="centered">
+            <div class="logoimage centered">
+                <img src="images/logos/leaves.jpg" height="25px">
+            </div>
+            <div class="logosubtext">
+                Let's Connect
+            </div>
+        </div>
+
+        <hr>
+        <footer>
+            <div class="social">
+                <p>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/pepperandolivehome/">
+                        @PEPPERANDOLIVEHOME
+                    </a>
+                </p>
+                <p>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/pepperandolivehome/">
+                        <img src="Images/social/insta.png" height="25px">
+                    </a>
+                </p>
+            </div>
+    </div>
 
     </footer>
     <script>
