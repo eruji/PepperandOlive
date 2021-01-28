@@ -6,183 +6,10 @@
     <title>Pepper and Olive Design</title>
     <link rel="icon" href="images/favicon/favicon.ico" type="image/gif" sizes="16x16">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="main.css">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Raleway:ital,wght@1,600&display=swap');
-
-        .navbar {
-            overflow: hidden;
-            background-color: white;
-            position: fixed;
-            top: 0;
-            /* padding-bottom: 100px; */
-            width: 100%;
-            height: 100px;
-            z-index: 9999;
-        }
-
-        .navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .main {
-            padding: 16px;
-            margin-top: 50px;
-            height: 1500px;
-            /* z-index: -1; */
-            /* Used in this example to enable scrolling */
-        }
-
-        .fade {
-            opacity: 1;
-            transition: opacity .25s ease-in-out;
-            -moz-transition: opacity .25s ease-in-out;
-            -webkit-transition: opacity .25s ease-in-out;
-        }
-
-        .fade:hover {
-            opacity: 0.5;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            flex-flow: wrap;
-            /*            background-color: gray;*/
-
-        }
-
-        .container3 {
-            position: relative;
-            text-align: center;
-            color: white;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            flex-flow: wrap;
-        }
-
-        .item {
-            /*            background-color: orangered;*/
-            /*            margin: 20px;*/
-            padding: 20px;
-            text-decoration-color: aqua;
-            color: white;
-            /*            font-size: 20px*/
-        }
-
-
-        .test {
-            height: 10px;
-            width: 200px;
-        }
-
-        hr {
-            /*            width: 75%;*/
-            border: 1px solid #cec8c8;
-            max-width: 1100px;
-        }
-
-        .logotext {
-            font-size: 30px;
-            font-family: 'Libre Baskerville', serif;
-            /* font-weight:bold */
-            /* background-color: tomato; */
-            letter-spacing: 2px;
-        }
-
-        .logoimage {
-            text-align: center;
-            /* background-color: teal; */
-            /* margin: auto; */
-            margin-bottom: 10px;
-            /* border-bottom: solid black 1px; */
-            /* width: 300px; */
-            border
-        }
-
-        .logosubtext {
-            font-size: 12px;
-            font-family: 'Raleway', sans-serif;
-            font-style: italic;
-            /* background-color:violet; */
-            margin: auto;
-            word-spacing: 10px;
-            letter-spacing: 5px;
-        }
-
-        .centered {
-            text-align: center;
-            position: relative;
-            
-        }
-
-        #slideshow {
-            margin: 20px auto;
-            position: relative;
-            /* background-color: tomato; */
-            max-width: 1200px;
-            height: 600px;
-            padding: 10px;
-
-            /* max-width: 1200px; */
-            /* margin: 0 auto; */
-            overflow: hidden;
-            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); */
-        }
-
-        #slideshow>div {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-
-            width: 1200px;
-            /* position: relative; */
-            left: 50%;
-            margin-left: -600px;
-        }
-
-        .centered2 {
-            position: absolute;
-            top: 85%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 15px 20px;
-            outline: 6px solid #e2dede;
-            background-color: white;
-            color: #5a5656;
-            border: 1px solid black;
-            /* font-family: sans-serif; */
-            font-size: 12px;
-            font-family: 'Raleway', sans-serif;
-            /* font-size: 13px; */
-            letter-spacing: 5px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #000;
-        }
-
-        .social {
-            /*            background-color: darkgrey;*/
-            text-align: center;
-            font-family: sans-serif;
-            /*            color: white;*/
-            padding: 10px;
-            /*          padding: 15px;*/
-            font-size: 10px;
-            letter-spacing: 2px;
-        }
+       
     </style>
 </head>
 
@@ -190,7 +17,9 @@
     <div class="navbar">
         <div class="centered">
             <div class="logotext">
-                PEPPER&OLIVE
+                <a href="index.html">
+                    PEPPER&OLIVE
+                </a>
             </div>
             <div class="logoimage centered">
                 <img src="images/logos/leaves.jpg" height="25px">
@@ -198,15 +27,20 @@
             <div>
                 <hr>
             </div>
-            <div class="logosubtext">
+            <div class="logosubtext centered">
                 Modern - Organic - Collected
             </div>
+
+            <!-- <div>
+                <hr>
+            </div> -->
         </div>
     </div>
 
 
     <!-- <hr> -->
     <div class="main">
+
         <div class="centered">
             <div id="slideshow">
                 <div>
@@ -234,21 +68,21 @@
 
         <div class="container">
             <div class="container3 item">
-                <a href="dale_project.html">
+                <a href="coulter-pine.html">
                     <img class="fade" src="Images/projects/coulter_pine/tall/coulter_pine-007.jpg">
-                    <div class="centered2 test">COULTER PINE</div>
+                    <div class="gallerytext test">COULTER PINE</div>
                 </a>
             </div>
             <div class="container3 item">
-                <a href="dale_project.html">
+                <a href="coulter-pine.html">
                     <img class="fade" src="Images/projects/coulter_pine/tall/coulter_pine-014.jpg">
-                    <div class="centered2 test">DALE</div>
+                    <div class="gallerytext test">DALE</div>
                 </a>
             </div>
             <div class="container3 item">
-                <a href="dale_project.html">
+                <a href="coulter-pine.html">
                     <img class="fade" src="Images/projects/coulter_pine/tall/coulter_pine-018.jpg">
-                    <div class="centered2 test">JUNIPER</div>
+                    <div class="gallerytext test">JUNIPER</div>
                 </a>
             </div>
         </div>
