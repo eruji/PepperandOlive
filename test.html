@@ -1,307 +1,128 @@
-<html>
+<html lang="en">
 
 <head>
-    <title>Pepper and Olive Interiors</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="jquery-3.5.1.js">
-
-
-    <!--    Gallery Thumbnail-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Raleway:wght@200;400&display=swap');
+    </style>
+    <style>
+        body {
+            background-image: url('/images/logos/socialmediathumb.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
         .container {
-            position: relative;
-            width: 50%;
-        }
-
-        .image {
-            opacity: 1;
-            display: block;
-            width: 100%;
-            height: auto;
-            transition: .5s ease;
-            backface-visibility: hidden;
-        }
-
-        .middle {
-            transition: .5s ease;
-            opacity: 0;
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        .container:hover .image {
-            opacity: 0.3;
-        }
-
-        .container:hover .middle {
-            opacity: 1;
-        }
-
-        .text {
-            background-color: #ffffff;
-            color: black;
-            font-size: 16px;
-            padding: 16px 32px;
-            font-family: sans-serif;
-            border: 1px solid black;
-            letter-spacing: 5px;
-            outline-offset: 2px;
-            outline: 6px solid white;
-        }
-
-        .btn {
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #ffffff;
-            color: black;
-            font-size: 16px;
-            padding: 16px 32px;
-            font-family: sans-serif;
-            border: 1px solid black;
-            letter-spacing: 5px;
-/*            outline-offset: 1px;*/
-            outline: 6px solid white;
-        }
-
-
-
-        .flex-center {
             display: flex;
-            justify-content: center;
-        }
-
-
-
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        a {
-            text-decoration: none;
-            color: #000;
-        }
-
-        .header {
-            /*            background-color: darkgrey;*/
-            text-align: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            background-color: darkgray;
             font-family: sans-serif;
-            /*            color: white;*/
-            padding: 1px;
-            padding-top: 15px;
-            font-size: 30px;
-            letter-spacing: 10px;
-        }
-
-        hr {
-            width: 75%;
-            border: 1px solid #cec8c8;
-        }
-
-
-        h2 {
-            width: 75%;
-            text-align: center;
-            border-bottom: 1px solid #000;
-            line-height: 0.1em;
-            margin: 10px 0 20px;
-        }
-
-        h2 span {
-            background: #fff;
-            padding: 0 10px;
-        }
-
-        .banner {
-            /*            background-color: darkgrey;*/
-            text-align: center;
-            font-family: sans-serif;
-            /*            color: white;*/
-            padding: 1px;
-            padding-top: 15px;
-            font-size: 30px;
-            letter-spacing: 10px;
-        }
-
-        .gallery {
-/*                        background-color: darkgrey;*/
-            text-align: center;
-            font-family: sans-serif;
-/*                        color: white;*/
-            padding: 1px;
-            padding-top: 15px;
-            font-size: 30px;
-            letter-spacing: 10px;
-        }
-
-        .contact {
-            /*            background-color: darkgrey;*/
-            text-align: center;
-            font-family: sans-serif;
-            /*            color: white;*/
-            padding: 1px;
-            padding-top: 15px;
-            font-size: 30px;
-            letter-spacing: 10px;
-        }
-
-        .social {
-            /*            background-color: darkgrey;*/
-            text-align: center;
-            font-family: sans-serif;
-            /*            color: white;*/
             padding: 10px;
-            /*          padding: 15px;*/
-            font-size: 10px;
-            letter-spacing: 2px;
+            /* border: solid black 1px; */
+            /* max-height: 100px; */
+            ;
+
         }
 
-        * {
-            box-sizing: border-box
+        .item-left {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            /* background-color: cornsilk; */
+            /* border: solid black 1px; */
+            padding: 5px;
+            /* max-height: 100px; */
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            /* max-width: 25%; */
+            color: rgb(88, 88, 88);
+
         }
 
-
-        #cf {
-            position: relative;
-            height: 281px;
-            width: 450px;
-            margin: 0 auto;
-            /*      display: block;*/
-            /*      margin-left: auto;*/
-            /*      margin-right: auto;*/
-            /*      width: 40%;*/
+        .item-center {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            /* background-color: cornsilk; */
+            /* border: solid black 1px; */
+            padding: 5px;
+            /* max-width: 25%; */
+            font-family: 'Libre Baskerville', serif;
+            color: rgb(88, 88, 88);
+            font-size: 20px;
+            letter-spacing: 5px;
             text-align: center;
         }
 
-        #cf img {
-            position: absolute;
-            /*      left:0;*/
-            -webkit-transition: opacity 1s ease-in-out;
-            -moz-transition: opacity 1s ease-in-out;
-            -o-transition: opacity 1s ease-in-out;
-            transition: opacity 1s ease-in-out;
+        .item-right {
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            /* background-color: cornsilk; */
+            /* border: solid black 1px; */
+            padding: 5px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            /* max-width: 25%; */
+            color: rgb(88, 88, 88);
+
         }
 
-        #cf img.top:hover {
-            opacity: 0;
+        .subitem {
+            /* background-color: grey; */
+            /* border: solid black 1px; */
+            padding: 5px;
+            margin: 5px;
+            /* color: black; */
+            /* flex-wrap: nowrap; */
+            text-align: center;
         }
 
-        #example {
-            background-repeat: repeat-x;
-            margin-left: 20px;
-            margin-top: 13px;
+        .container a {
+            text-decoration: none;
+            color: inherit;
         }
-
-        #example .but1 {
-
-            line-height: 0px;
-            margin-top: 0px;
-            margin-left: 0px;
-            margin-right: 0px;
-            display: inline-block;
-            position: relative;
-        }
-
-        #example .but1 a {
-            position: absolute;
-            top: 5px;
-            left: 5px;
-        }
-
-        .child {
-            ... margin: 0 auto;
-        }
-        
-        
     </style>
 </head>
 
 <body>
-
-    <div class="header">
-        <a href="#home">
-            <img src="Images/Logos/Black%20on%20Transparent.png" height="80">
-        </a>
-        <hr>
-    </div>
-
-    <div class="banner">
-        <a href="#home">
-            <img src="Images/Dale_Project/dale-006.jpg" width="75%">
-        </a>
-        <hr>
-    </div>
-    <div class="gallery">
-        featured projects
-
-        <!--    Gallery Hover Test-->
-        
-        
-        <p>
-        <div class="container">
-            <a href="dale_project.html">
-                <img src="Images/coulter_pine_project/tall/coulter_pine-007.jpg" alt="Coulter Pine Project" class="image" style="width:300px"></a>
-            <button class="btn">COULTER PINE</button>
-
-            <!--                <div class="text">COULTER PINE</div>-->
-
+    <div class="container">
+        <div class="item-left">
+            <div class="subitem"> <a href="#welcome">WELCOME</a>
+            </div>
+            <div class="subitem"> <a href="#welcome">ABOUT</a>
+            </div>
+            <div class="subitem"> <a href="#welcome">SERVICES</a>
+            </div>
+            <div class="subitem"> <a href="#welcome">CAREERS</a>
+            </div>
         </div>
-    </div>
-    <br>
-    <hr>
+        <div class="item-center">
+            <div>
+                PEPPER&OLIVE
+            </div>
+            <div>
+                <img src="images/logos/leaves.png" height="20px">
+            </div>
+        </div>
+        <div class="item-right">
+            <div class="subitem"> <a href="#welcome">PORTFOLIO</a>
+            </div>
+            <div class="subitem"> <a href="#welcome">BLOG</a>
+            </div>
+            <div class="subitem"> <a href="#welcome">SHOP</a>
+            </div>
+            <div class="subitem"> <a href="#welcome">CONTACT</a>
+            </div>
+        </div>
 
-    <div class="contact">
-        <p>
-            contact form here
-        </p>
-    </div>
-    <div class="social">
-        <p>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/pepperandolivehome/">
-                @PEPPERANDOLIVEHOME
-            </a>
-        </p>
-        <p>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/pepperandolivehome/">
-                <img src="Images/social/insta.png" height="25px">
-            </a>
-        </p>
-    </div>
+</body>
 
-
-
-
-
-
-
-    <!--    Example of Left and Right on same line-->
-    <!--
-    <p style="text-align: left">
-        Left Aligned
-        <span style="float:right">
-            Right Aligned
-        </span>
-    </p>
-
-     Crossfading Test
-    <div id="cf">
-        <img class="bottom" src="/Images/Dale_Project/dale-001.jpg" />
-        <img class="top" src="/Images/Dale_Project/dale-002.jpg" />
-    </div>
--->
-
-
-
-
-
-    <script>
-    </script>
-
-</body></html>
+</html>
