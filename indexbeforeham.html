@@ -94,19 +94,6 @@
             letter-spacing: 5px;
             text-align: center;
         }
-        .header-ham {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: center;
-            /* background-color: cornsilk; */
-            /* border: solid black 1px; */
-            /* padding: 5px; */
-            /* max-height: 100px; */
-            /* max-width: 25%; */
-            color: rgb(88, 88, 88);
-
-        }
 
         .header-right {
             display: flex;
@@ -279,52 +266,6 @@
             font-family: 'Raleway', sans-serif;
             font-size: 15px;
         }
-
-        #hamnav {
-            /* width: 100%; */
-            /* background: #000; */
-            /* Optional */
-            position: sticky;
-            top: 0;
-        }
-
-        /* Hide Hamburger */
-        #hamnav label,
-        #hamburger,
-        #hamitems,
-        .header-ham {
-            display: none;
-        }
-
-        /* [ON SMALL SCREENS] */
-        @media screen and (max-width: 768px) {
-
-            /* Show Hamburger Icon */
-            #hamnav label,
-            .header-ham {
-                display: inline-block;
-                color: rgb(88, 88, 88);
-                font-family: 'Raleway', sans-serif;
-                font-size: 15px;
-                font-weight: 400;
-                /* background: #a02620; */
-                /* font-style: normal; */
-                /* font-size: 1.2em; */
-                /* padding: 10px; */
-                /* border: solid black 1px; */
-            }
-
-            /* Toggle Show/Hide Menu */
-            .header-left,
-            .header-right {
-                display: none;
-            }
-
-            #hamnav input:checked~#hamitems {
-                display: block;
-            }
-        }
-        
     </style>
 </head>
 
@@ -334,19 +275,6 @@
 
         <div id="navbar">
             <div class="header">
-                <div class="header-ham" id="hamnav">
-                    <!-- [THE HAMBURGER] -->
-                    <label for="hamburger">&#9776;</label>
-                    <input type="checkbox" id="hamburger" />
-                    <!-- [MENU ITEMS] -->
-                    <!-- <div id="hamitems">
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About</a>
-                        <a href="tech.html">Tech</a>
-                        <a href="games.html">Games</a>
-                        <a href="reviews.html">Reviews</a>
-                    </div> -->
-                </div>
                 <div class="header-left">
                     <div class="header-subitem"> <a href="#welcome">WELCOME</a>
                     </div>
@@ -383,7 +311,7 @@
 
             <!-- WIDE PHOTO SLIDESHOW -->
             <div class="wide-photo">
-                <div class="container">
+                <!-- <div class="container"> -->
                     <div id="slideshow">
                         <div>
                             <img src="/images/projects/coulter_pine/wide/coulter_pine-005.jpg">
@@ -395,7 +323,7 @@
                             <img src="/images/projects/coulter_pine/wide/coulter_pine-008.jpg">
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
 
             <!-- <div class="wide-photo">
