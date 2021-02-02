@@ -1,0 +1,146 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepper and Olive Design</title>
+    <link rel="icon" href="images/favicon/favicon.ico" type="image/gif" sizes="16x16">
+
+    <!-- Canonical link -->
+    <link rel="canonical" href="https://pepperandolive.netlify.app" />
+
+    <!-- Social Media meta tags -->
+    <meta property="og:title" content="Pepper & Oliive - Interior Design">
+    <meta property="og:description" content="Interior design for the modern home.">
+    <meta property="og:image" content="https://pepperandolive.netlify.app/images/logos/socialmediathumb.jpg">
+    <meta property="og:url" content="https://pepperandolive.netlify.app">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="website" />
+
+    <!-- jquery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- stylesheet link -->
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="centered">
+            <div class="logotext">
+                <a href="index.html">
+                    PEPPER&OLIVE
+                </a>
+            </div>
+            <div class="logoimage centered">
+                <img src="images/logos/leaves.jpg" height="25px">
+            </div>
+            <div class="logosubtext centered">
+                Modern - Organic - Collected
+            </div>
+
+            <!-- <div>
+                <hr>
+            </div> -->
+        </div>
+    </div>
+
+
+    <!-- <hr> -->
+    <div class="main">
+
+        <div class="centered">
+            <div id="slideshow">
+                <div>
+                    <img src="images/projects/coulter_pine/wide/coulter_pine-006.jpg">
+                </div>
+                <div>
+                    <img src="images/projects/coulter_pine/wide/coulter_pine-012.jpg">
+                </div>
+                <div>
+                    <img src="images/projects/coulter_pine/wide/coulter_pine-014.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="centered">
+            <div class="logoimage centered">
+                <img src="images/logos/leaves.jpg" height="25px">
+            </div>
+            <div class="logosubtext">
+                Latest Projects
+            </div>
+        </div>
+        <div>
+            <hr>
+        </div>
+
+
+        <div class="container">
+            <div class="container3 item">
+                <a href="coulter-pine.html">
+                    <img class="fade" src="Images/projects/coulter_pine/tall/coulter_pine-007.jpg">
+                    <div class="gallerytext test">COULTER PINE</div>
+                </a>
+            </div>
+            <div class="container3 item">
+                <a href="coulter-pine.html">
+                    <img class="fade" src="Images/projects/coulter_pine/tall/coulter_pine-014.jpg">
+                    <div class="gallerytext test">DALE</div>
+                </a>
+            </div>
+            <div class="container3 item">
+                <a href="coulter-pine.html">
+                    <img class="fade" src="Images/projects/coulter_pine/tall/coulter_pine-018.jpg">
+                    <div class="gallerytext test">JUNIPER</div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="centered">
+            <div class="logoimage centered">
+                <img src="images/logos/leaves.jpg" height="25px">
+            </div>
+            <div class="logosubtext">
+                Let's Connect
+            </div>
+        </div>
+
+        <hr>
+        <footer>
+            <div class="social">
+                <p>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/pepperandolivehome/">
+                        @PEPPERANDOLIVEHOME
+                    </a>
+                </p>
+                <p>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/pepperandolivehome/">
+                        <img src="Images/social/insta.png" height="25px">
+                    </a>
+                </p>
+            </div>
+    </div>
+
+    </footer>
+    <script>
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function () {
+            $('#slideshow > div:first')
+                .fadeOut(2000)
+                .next()
+                .fadeIn(2000)
+                .end()
+                .appendTo('#slideshow');
+        }, 7000);
+    </script>
+
+</body>
+
+
+</html>

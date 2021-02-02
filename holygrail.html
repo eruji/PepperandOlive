@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media (min-width: 768px) {
+            .HolyGrail-body {
+                flex-direction: row;
+                flex: 1;
+            }
+
+            .HolyGrail {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+
+            .HolyGrail-body {
+                display: flex;
+                flex: 1;
+                border: solid black 1px;
+            }
+
+            .HolyGrail-content {
+                flex: 1;
+                border: solid black 1px;
+            }
+
+            .HolyGrail-nav,
+            .HolyGrail-ads {
+                /* 12em is the width of the columns */
+                flex: 0 0 12em;
+                border: solid black 1px;
+            }
+
+            .HolyGrail-nav {
+                /* put the nav on the left */
+                order: -1;
+                border: solid black 1px;
+            }
+    </style>
+</head>
+
+<body>
+
+    <body class="HolyGrail">
+        <header>HEADER</header>
+        <div class="HolyGrail-body">
+            <main class="HolyGrail-content">BODY</main>
+            <nav class="HolyGrail-nav">NAV</nav>
+            <aside class="HolyGrail-ads">ADS</aside>
+        </div>
+        <footer>FOOTER</footer>
+    </body>
+</body>
+
+</html>
