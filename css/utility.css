@@ -1,0 +1,39 @@
+/* utilies */
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow:hidden;
+    padding-bottom: 20px;
+}
+
+.bg-dark {
+    background-color: darkgray;
+}
+.text-center {
+    text-align: center;
+}
+
+.font-logo {
+    font-family: 'Libre Baskerville', serif;
+    color: rgb(88, 88, 88);
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.font-others {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(88, 88, 88);
+    line-height: 1.6;
+    font-size: 15px;
+}

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Raleway:wght@200;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {}
+
+ul {
+    list-style-type: none;
+    color: rgb(46, 17, 17);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(88, 88, 88);
+}
+
+/* navbar */
+
+.navbar {
+    height: 100px;
+    overflow: hidden;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navbar a {
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar ul a:hover {
+    font-weight: bold;
+}
+
+/* showcase */
+
+.showcase {
+    background-image: url('/images/projects/coulter_pine/large-1200w/coulter_pine-018.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+}
+
+/* socialfeed */
+.socialfeed {
+    margin: 50px 0;
+
+}
+
+/* footer */

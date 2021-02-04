@@ -1,0 +1,132 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- hamburger -->
+    <link href="hamburger/hamburgers.css" rel="stylesheet">
+    <!-- slidereveal -->
+    <script src="/slidereveal/jquery.slidereveal.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        /* Hide Hamburger */
+        .hamburger {
+            display: none;
+        }
+
+        /* hide navsmall */
+        .navsmall {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .hamburger,
+            .navsmall {
+                display: block;
+            }
+
+            .navlarge,
+            .navlarge-left {
+                display: none;
+            }
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            background-color: orange;
+            height: 100vh;
+        }
+
+        .navlarge {
+            background-color: orchid;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-evenly;
+        }
+        .navlarge-left{
+            border: black solid 1px;
+        }
+        .navlarge-center{
+            border: black solid 1px;
+        }
+        .navlarge-right{
+            border: black solid 1px;
+        }
+
+        .navsmall {
+            background-color: palegreen;
+        }
+
+        .widephoto {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: paleturquoise;
+        }
+
+        .widephoto img {
+            display: block;
+            width: 1200px;
+            height: auto;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="navlarge">
+            <div class="navlarge-left">
+                left
+            </div>
+            <div class="navlarge-center">
+                center
+            </div>
+            <div class="navlarge-right">
+                right
+            </div>
+        </div>
+        <div class="navsmall">
+            <button class="hamburger hamburger--spin" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+        <!-- create the slide panel -->
+        <div id='slider'>Hello World!!</div>
+        <!-- widephoto -->
+        <div class="widephoto">
+            <img src="images/projects/coulter_pine/wide/coulter_pine-005.jpg">
+        </div>
+    </div>
+
+
+
+
+
+    <!-- jquery script to toggle hamburger -->
+    <script>
+        var slider = $('#slider').slideReveal();
+        var $hamburger = $(".hamburger");
+        $hamburger.on("click", function (e) {
+            $hamburger.toggleClass("is-active");
+            // Do something else, like open/close menu
+            // To toggle the panel
+            slider.slideReveal("toggle") // which is equal to $('#slider').slideReveal("toggle");
+        });
+    </script>
+</body>
+
+</html>
