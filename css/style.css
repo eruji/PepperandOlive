@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Raleway:wght@200;400&display=swap');
 * {
-    margin: 0;
+    box-sizing: border-box;
     padding: 0;
+    margin: 0;
 }
 
 body {}
@@ -16,10 +17,14 @@ a {
     color: rgb(88, 88, 88);
 }
 
+p {
+    width: 300px
+}
+
 /* navbar */
 
 .navbar {
-    height: 100px;
+    height: 75px;
     overflow: hidden;
 }
 
@@ -53,10 +58,78 @@ a {
     width: 100%;
 }
 
-/* socialfeed */
-.socialfeed {
-    margin: 50px 0;
+/* letswork */
 
+.letswork {
+    height: 500px;
+}
+
+.letswork img {
+    height: 350px;
+    box-shadow: 10px 10px 5px #ccc;
+}
+
+.letswork .flex {
+    justify-content: space-evenly;
+}
+
+.letswork .btn:hover {
+    font-weight: bold;
+}
+
+/* recent */
+
+.recent {
+    height: 600;
+}
+.recent .container .flex {
+    flex-direction: column;
+}
+
+.recent .fade {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.recent .fade:hover {
+    opacity: 0.5;
+}
+
+.recent-thumb {
+    position: relative;
+}
+
+/* services */
+
+.services {
+    height: 600px;
+}
+
+/* socialfeed */
+
+.socialfeed {
+    height: 700px;
+    margin: 50px 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+.socialfeed .container {
+    width: 800px
+}
+
+/* connect */
+.connect {
+    height: 600px;
 }
 
 /* footer */
+.footer {
+    height: 300px;
+}
+.footer ul {
+    list-style-type: none;
+    color: white;
+}

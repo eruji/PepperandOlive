@@ -1,0 +1,469 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Raleway:wght@200;400&display=swap');
+    </style>
+    <style>
+        body {
+            /* background-image: url('/images/logos/socialmediathumb.jpg'); */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            margin: 0;
+        }
+
+        .page {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            height: 100vh;
+        }
+
+        .body {
+            flex-grow: 1;
+            overflow: auto;
+        }
+
+        #navbar {
+            /* display: flex; */
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: auto;
+            width: 100%;
+            z-index: 999;
+            /* flex-grow: 0; */
+            /* flex-wrap: wrap; */
+            /* height: 100px; */
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            background-color: darkgray;
+            font-family: sans-serif;
+            /* padding: 10px; */
+            min-height: 75px;
+            /* border: solid black 1px; */
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            /* background-color: cornsilk; */
+            /* border: solid black 1px; */
+            padding: 5px;
+            /* max-height: 100px; */
+            font-family: 'Raleway', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            /* max-width: 25%; */
+            color: rgb(88, 88, 88);
+
+        }
+
+        .header-center {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            /* background-color: cornsilk; */
+            /* border: solid black 1px; */
+            padding: 5px;
+            /* max-width: 25%; */
+            font-family: 'Libre Baskerville', serif;
+            color: rgb(88, 88, 88);
+            font-size: 20px;
+            letter-spacing: 5px;
+            text-align: center;
+        }
+        .header-ham {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            /* background-color: cornsilk; */
+            /* border: solid black 1px; */
+            /* padding: 5px; */
+            /* max-height: 100px; */
+            /* max-width: 25%; */
+            color: rgb(88, 88, 88);
+
+        }
+
+        .header-right {
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            /* background-color: cornsilk; */
+            /* border: solid black 1px; */
+            padding: 5px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            /* max-width: 25%; */
+            color: rgb(88, 88, 88);
+
+        }
+
+        .header-subitem {
+            /* background-color: grey; */
+            /* border: solid black 1px; */
+            padding: 5px;
+            margin: 5px;
+            /* color: black; */
+            /* flex-wrap: nowrap; */
+            text-align: center;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: rgb(88, 88, 88);
+        }
+
+        .header-subitem:hover {
+            color: rgb(29, 29, 29);
+            font-weight: bold;
+        }
+
+        .wide-photo {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            /* background-color: darkorange; */
+            /* font-family: sans-serif; */
+            /* width: 100%; */
+            /* padding: 10px; */
+            /* min-height: 75px; */
+            /* border: solid black 1px; */
+            /* max-height: 100px; */
+            /* height: 2000px; */
+            margin-top: 100px;
+            /* text-align: center; */
+            overflow: hidden;
+        }
+
+        .wide-photo-item {
+            display: flex;
+            /* border: solid black 1px; */
+            overflow: hidden;
+        }
+
+        .wide-photo-item img {
+            height: 600px;
+            width: 1200px;
+            overflow: hidden;
+
+        }
+
+        #slideshow {
+            /* margin: 50px auto; */
+            position: relative;
+            width: 1200px;
+            height: 600px;
+            /* padding: 10px; */
+            /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); */
+            overflow: hidden;
+            /* border: solid black 1px; */
+
+        }
+
+        #slideshow>div {
+            position: absolute;
+            /* top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px; */
+        }
+
+
+        #footer {
+            margin: 0;
+            width: 100%;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: stretch;
+            align-content: flex-start;
+            background-color: darkgray;
+            font-family: sans-serif;
+            /* padding: 10px; */
+            /* min-height: 300px; */
+            /* border: solid black 1px; */
+            /* max-height: 300px; */
+            text-align: center;
+            color: white;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            ;
+        }
+
+        .footer-left {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            /* border: solid black 1px; */
+            align-items: center;
+            /* background-color: darkorange; */
+            font-family: sans-serif;
+            /* width: 50%; */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-right {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: row;
+            align-content: flex-start;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            /* justify-content: flex-end; */
+            /* align-items: center; */
+            /* border: solid black 1px; */
+            /* background-color: darkorange; */
+            font-family: sans-serif;
+            /* width: 50%; */
+            /* text-align: left; */
+            overflow: hidden;
+        }
+
+        .footer-col {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            text-align: left;
+            /* background-color: grey; */
+            /* border: solid black 1px; */
+            /* padding: 5px; */
+            /* margin: 5px; */
+        }
+
+        .footer-subitem {
+            /* background-color: grey; */
+            display: flex;
+            flex-grow: 1;
+            /* border: solid black 1px; */
+            padding: 3px;
+            margin: 3px;
+            /* color: black; */
+            /* flex-wrap: nowrap; */
+            text-align: left;
+            font-family: 'Raleway', sans-serif;
+            font-size: 15px;
+        }
+
+        #hamnav {
+            /* width: 100%; */
+            /* background: #000; */
+            /* Optional */
+            position: sticky;
+            top: 0;
+        }
+
+        /* Hide Hamburger */
+        #hamnav label,
+        #hamburger,
+        #hamitems,
+        .header-ham {
+            display: none;
+        }
+
+        /* [ON SMALL SCREENS] */
+        @media screen and (max-width: 768px) {
+
+            /* Show Hamburger Icon */
+            #hamnav label,
+            .header-ham {
+                display: inline-block;
+                color: rgb(88, 88, 88);
+                font-family: 'Raleway', sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                /* background: #a02620; */
+                /* font-style: normal; */
+                /* font-size: 1.2em; */
+                /* padding: 10px; */
+                /* border: solid black 1px; */
+            }
+
+            /* Toggle Show/Hide Menu */
+            .header-left,
+            .header-right {
+                display: none;
+            }
+
+            #hamnav input:checked~#hamitems {
+                display: block;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="page">
+
+        <div id="navbar">
+            <div class="header">
+                <div class="header-ham" id="hamnav">
+                    <!-- [THE HAMBURGER] -->
+                    <label for="hamburger">&#9776;</label>
+                    <input type="checkbox" id="hamburger" />
+                    <!-- [MENU ITEMS] -->
+                    <!-- <div id="hamitems">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="tech.html">Tech</a>
+                        <a href="games.html">Games</a>
+                        <a href="reviews.html">Reviews</a>
+                    </div> -->
+                </div>
+                <div class="header-left">
+                    <div class="header-subitem"> <a href="#welcome">WELCOME</a>
+                    </div>
+                    <div class="header-subitem"> <a href="#welcome">ABOUT</a>
+                    </div>
+                    <div class="header-subitem"> <a href="#welcome">SERVICES</a>
+                    </div>
+                    <div class="header-subitem"> <a href="#welcome">CAREERS</a>
+                    </div>
+                </div>
+                <div class="header-center">
+                    <div>
+                        <a href="#home">PEPPER&OLIVE</a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-subitem"> <a href="#welcome">PORTFOLIO</a>
+                    </div>
+                    <div class="header-subitem"> <a href="#welcome">BLOG</a>
+                    </div>
+                    <div class="header-subitem"> <a href="#welcome">SHOP</a>
+                    </div>
+                    <div class="header-subitem"> <a href="#welcome">CONTACT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body">
+            <!-- WIDE PHOTO -->
+            <!-- <div class="wide-photo">
+                <img src="images/projects/coulter_pine/wide/coulter_pine-005.jpg">
+            </div> -->
+
+            <!-- WIDE PHOTO SLIDESHOW -->
+            <div class="wide-photo">
+                <div class="container">
+                    <div id="slideshow">
+                        <div>
+                            <img src="/images/projects/coulter_pine/wide/coulter_pine-005.jpg">
+                        </div>
+                        <div>
+                            <img src="/images/projects/coulter_pine/wide/coulter_pine-007.jpg">
+                        </div>
+                        <div>
+                            <img src="/images/projects/coulter_pine/wide/coulter_pine-008.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="wide-photo">
+            <div class="wide-photo-item">
+                <img src="images/projects/coulter_pine/wide/coulter_pine-005.jpg">
+            </div>
+        </div> -->
+
+
+
+
+            <!-- <div style="height: 500px;">
+            </div> -->
+
+            <!-- PAGEFOOTER -->
+            <div id="footer">
+                <div class="footer">
+                    <div class="footer-left">
+                        <img src="images/logos/leavesstrokewhite.png" width=100px>
+                    </div>
+
+                    <div class="footer-right">
+                        <div class="footer-col">
+                            <div class="footer-subitem">
+                                CONTACT
+                            </div>
+                            <div class="footer-subitem">
+                                info@pepperandolive.com
+                            </div>
+                            <div class="footer-subitem">
+                                (909) 366-5078
+                            </div>
+                            <div class="footer-subitem">
+                                pepperandolive.com
+                            </div>
+                        </div>
+                        <div class="footer-col">
+                            <div class="footer-subitem">
+                                SOCIAL
+                            </div>
+                            <div class="footer-subitem">
+                                Instagram
+                            </div>
+                            <div class="footer-subitem">
+                                Pinterest
+                            </div>
+                            <div class="footer-subitem">
+                                Facebook
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function () {
+            $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+        }, 5000);
+    </script>
+</body>
+
+</html>
