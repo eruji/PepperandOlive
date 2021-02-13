@@ -125,16 +125,7 @@ p {
 
 .connect {
     height: auto;
-}
-
-input, textarea, select {
-    /* font-family: "Source Sans Pro", "sans-serif"; */
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-size: 12pt;
-    line-height: 1.75em;
-    color: #39454b;
-    letter-spacing: 0.025em;
+    overflow: hidden;
 }
 
 /* footer */
@@ -150,7 +141,6 @@ input, textarea, select {
 
 /* portfolio header */
 .portfolio-header {
-    /* width: 100vw; */
     height: auto;
 }
 .portfolio-header img {
