@@ -48,6 +48,19 @@ p {
     font-weight: bold;
 }
 
+.short-text {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .short-text {
+        display: inline-block;
+    }
+    .full-text {
+        display: none;
+    }
+}
+
 /* showcase */
 
 .showcase {
@@ -141,14 +154,17 @@ p {
 }
 
 /* portfolio header */
+
 .portfolio-header {
     height: auto;
 }
+
 .portfolio-header img {
     /* max-width: 40%; */
 }
 
 /* portfolio images */
+
 .portfolio {
     height: auto;
     /* border: solid black 1px; */

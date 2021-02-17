@@ -59,6 +59,14 @@
     font-weight: lighter;
     text-decoration: none;
 }
+.font-logoabbr {
+    font-family: 'Libre Baskerville', serif;
+    color: rgb(88, 88, 88);
+    font-size: 22Px;
+    letter-spacing: -5px;
+    font-weight: lighter;
+    text-decoration: none;
+}
 
 .font-others {
     font-family: 'Raleway', sans-serif;
